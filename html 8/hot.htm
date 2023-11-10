@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .div1{
+            size: 30;
+            background-color: aliceblue;
+        }
+        body{
+            text-align: center;
+            background-color: bisque;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>國二智</title>
+</head>
+<body>
+    <h1>歷來作業查詢</h1>
+    <div class="div1">
+    <button id="bth2" onclick="google()">搜尋</button>
+    </div>
+    <p>從14週開始運行</p>
+    <div class="div2">
+        <button id="bth?" onclick="bth8()">使用說明</button>
+    </div>
+    <script>
+        var 資料 = [
+            0,0,0,0,0,0,0,0,0,0,0,0,0,"14周作業須知:[聯絡簿:國卷訂、英文卷*2、大卷訂*1、地理小卷4-2、地理講義37~40、公民講義42~46][作業須知:英文大卷訂正訂正1、2、4、5、6活用1、2、3，選擇、閱讀、克漏字只需抄寫老師手抄筆記，抄自己的變數][作業圖片連結:https://photos.app.goo.gl/oFs6SNtDKQ6sXHHC8]",
+            "15週作業須知:[聯絡簿:世說*4、硬筆*9、數卷*1(C、B)、本土奇異語詞*10、表藝學習單][作業須知:暫無]"
+        ];
+        function google(){
+            var count = prompt("輸入周次(ex:1、2)");
+            count--;
+            if(count<14 && count>15){
+                document.write("輸入資料不存在或格式不對");
+            }
+            document.write(資料[count]);
+        };
+        function bth8(){
+            window.location.href="說明.htm"
+        }
+    </script>
+</body>
+</html>
